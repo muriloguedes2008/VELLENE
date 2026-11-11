@@ -1,0 +1,900 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+:root {
+
+    --creme: #F8F6F1;
+
+    --preto: #292929;
+
+    --verde: #7A8B72;
+
+    --bege: #D8CBB8;
+
+    --marrom: #8B7561;
+
+}
+
+
+body {
+
+    font-family: Arial, sans-serif;
+
+    background-color: var(--creme);
+
+    color: var(--preto);
+
+}
+
+
+/* =========================
+   CABEÇALHO
+========================= */
+
+header {
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 1000;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 25px 8%;
+
+    background-color: white;
+
+}
+
+
+header h1 {
+
+    font-size: 28px;
+
+    letter-spacing: 3px;
+
+}
+
+
+nav {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+nav a {
+
+    text-decoration: none;
+
+    color: var(--preto);
+
+    font-size: 16px;
+
+    transition: 0.3s;
+
+}
+
+
+nav a:hover {
+
+    color: var(--verde);
+
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: calc(100vh - 80px);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    text-align: center;
+
+    padding: 80px 8%;
+
+}
+
+
+.hero-content {
+
+    max-width: 700px;
+
+}
+
+
+.hero-subtitle {
+
+    font-size: 14px;
+
+    letter-spacing: 4px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.hero h2 {
+
+    font-size: 56px;
+
+    line-height: 1.1;
+
+    margin-bottom: 25px;
+
+}
+
+
+.hero-text {
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    margin-bottom: 35px;
+
+}
+
+
+.hero-button {
+
+    display: inline-block;
+
+    padding: 15px 30px;
+
+    border-radius: 30px;
+
+    background-color: var(--verde);
+
+    color: white;
+
+    text-decoration: none;
+
+    font-size: 15px;
+
+    transition: 0.3s;
+
+}
+
+
+.hero-button:hover {
+
+    background-color: var(--marrom);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================
+   PRODUTOS
+========================= */
+
+.products {
+
+    padding: 80px 8%;
+
+    background-color: white;
+
+}
+
+
+.products-header {
+
+    text-align: center;
+
+    margin-bottom: 50px;
+
+}
+
+
+.products-header p {
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.products-header h2 {
+    font-size: 42px;
+    margin-top: 5px;
+}
+
+.order-section .products-header {
+    margin-bottom: 60px;
+}
+
+.order-section .products-header p {
+    color: var(--verde);
+    font-weight: bold;
+}
+
+.products-grid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 30px;
+
+    margin-bottom: 50px;
+
+}
+
+
+.product-card {
+
+    background-color: var(--creme);
+
+    border-radius: 15px;
+
+    overflow: hidden;
+
+    transition: 0.3s;
+
+}
+
+
+.product-card:hover {
+
+    transform: translateY(-5px);
+
+}
+
+
+.product-image {
+
+    width: 100%;
+
+    height: 250px;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background-color: #e9e5dc;
+
+    overflow: hidden;
+
+}
+
+
+.product-image span {
+
+    font-size: 14px;
+
+}
+
+
+.product-image img {
+
+    width: 100%;
+
+    height: 100%;
+
+    object-fit: cover;
+
+}
+
+
+.product-info {
+
+    padding: 25px;
+
+}
+
+
+.product-info h3 {
+
+    font-size: 22px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.product-info p {
+
+    font-size: 15px;
+
+    line-height: 1.5;
+
+    margin-bottom: 20px;
+
+}
+
+
+.product-price {
+
+    display: block;
+
+    font-size: 18px;
+
+    font-weight: bold;
+
+    margin-bottom: 20px;
+
+}
+
+
+.product-info button {
+
+    width: 100%;
+
+    padding: 13px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background-color: var(--verde);
+
+    color: white;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.product-info button:hover {
+
+    background-color: var(--marrom);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================
+   FILTROS
+========================= */
+
+.category-buttons {
+
+    display: flex;
+
+    justify-content: center;
+
+    gap: 10px;
+
+    margin-top: 25px;
+
+    flex-wrap: wrap;
+
+}
+
+
+.category-button {
+
+    padding: 10px 20px;
+
+    border: 1px solid var(--verde);
+
+    border-radius: 25px;
+
+    background-color: transparent;
+
+    color: var(--verde);
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.category-button:hover {
+
+    background-color: var(--verde);
+
+    color: white;
+
+    transform: translateY(-2px);
+
+}
+
+
+.category-button.active {
+
+    background-color: var(--verde);
+
+    color: white;
+
+}
+
+
+/* =========================
+   MINHA ENCOMENDA
+========================= */
+
+.order-section {
+    padding: 90px 8%;
+    min-height: 80vh;
+    background-color: var(--creme);
+}
+
+#order-list {
+
+    max-width: 900px;
+
+    margin: 0 auto;
+
+}
+
+
+/* =========================
+   ITEM
+========================= */
+
+.order-item {
+    background-color: white;
+    padding: 25px 30px;
+    margin-bottom: 18px;
+    border-radius: 18px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.06);
+    transition: 0.3s;
+}
+
+.order-item:hover {
+    transform: translateY(-2px);
+}
+
+
+.order-product {
+
+    flex: 1;
+
+}
+
+
+.order-product h3 {
+    font-size: 19px;
+    margin-bottom: 8px;
+}
+
+.order-product span {
+    font-size: 15px;
+    font-weight: bold;
+    color: var(--verde);
+}
+
+
+.order-product span {
+
+    font-weight: bold;
+
+    color: var(--verde);
+
+}
+
+
+/* =========================
+   QUANTIDADE
+========================= */
+
+.quantity-control {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.quantity-control span {
+    min-width: 30px;
+    text-align: center;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.quantity-control button {
+    width: 38px;
+    height: 38px;
+    border: 1px solid var(--bege);
+    border-radius: 50%;
+    background-color: var(--creme);
+    color: var(--preto);
+    font-size: 20px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.quantity-control button:hover {
+    background-color: var(--verde);
+    color: white;
+    border-color: var(--verde);
+    transform: scale(1.05);
+}
+
+
+.quantity-control button:hover {
+
+    background-color: var(--verde);
+
+    color: white;
+
+}
+
+
+/* =========================
+   REMOVER
+========================= */
+
+.remove-button {
+    border: none;
+    padding: 10px 18px;
+    border-radius: 20px;
+    background-color: transparent;
+    color: var(--marrom);
+    font-size: 14px;
+    cursor: pointer;
+    transition: 0.25s;
+}
+
+.remove-button:hover {
+    background-color: var(--marrom);
+    color: white;
+}
+
+
+/* =========================
+   TOTAL
+========================= */
+
+.order-total {
+    max-width: 900px;
+    margin: 35px auto 0;
+    padding: 25px 10px;
+    text-align: right;
+    border-top: 1px solid var(--bege);
+}
+
+.order-total h3 {
+    font-size: 26px;
+    letter-spacing: 0.5px;
+}
+
+
+/* =========================
+   FINALIZAR
+========================= */
+
+.finish-order-button {
+
+    display: block;
+
+    width: 100%;
+
+    max-width: 900px;
+
+    margin: 20px auto 0;
+
+    padding: 15px;
+
+    border: none;
+
+    border-radius: 25px;
+
+    background-color: var(--verde);
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+
+}
+
+
+.finish-order-button:hover {
+
+    background-color: var(--marrom);
+
+    transform: translateY(-3px);
+
+}
+
+
+/* =========================
+   ENCOMENDA VAZIA
+========================= */
+
+.empty-order {
+
+    text-align: center;
+
+    padding: 60px 20px;
+
+}
+
+
+.empty-order h3 {
+
+    font-size: 24px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.empty-order p {
+
+    margin-bottom: 25px;
+
+}
+
+
+.empty-order a {
+
+    display: inline-block;
+
+    padding: 12px 25px;
+
+    border-radius: 25px;
+
+    background-color: var(--verde);
+
+    color: white;
+
+    text-decoration: none;
+
+    transition: 0.3s;
+
+}
+
+
+.empty-order a:hover {
+
+    background-color: var(--marrom);
+
+}
+
+
+/* =========================
+   RESPONSIVIDADE
+========================= */
+
+@media (max-width: 768px) {
+
+
+    header {
+
+        padding: 20px;
+
+    }
+
+
+    nav {
+
+        gap: 15px;
+
+    }
+
+
+    nav a {
+
+        font-size: 14px;
+
+    }
+
+
+    .hero {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .hero h2 {
+
+        font-size: 40px;
+
+    }
+
+
+    .hero-text {
+
+        font-size: 16px;
+
+    }
+
+
+    .products {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .products-header h2 {
+
+        font-size: 32px;
+
+    }
+
+
+    .products-grid {
+
+        grid-template-columns: 1fr;
+
+    }
+
+
+    .order-section {
+
+        padding: 60px 20px;
+
+    }
+
+
+    .order-item {
+
+        flex-direction: column;
+
+        align-items: stretch;
+
+        text-align: center;
+
+    }
+
+
+    .quantity-control {
+
+        justify-content: center;
+
+    }
+
+
+    .remove-button {
+
+        width: 100%;
+
+    }
+
+}
+.product-info .order-button {
+    display: block;
+    width: 100%;
+    padding: 13px;
+    border-radius: 25px;
+    background-color: var(--verde);
+    color: white;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-info .order-button:hover {
+    background-color: var(--marrom);
+    transform: translateY(-3px);
+}
+
+/* OPÇÕES DAS LEMBRANCINHAS */
+
+.order-option {
+    display: block;
+    width: 100%;
+    padding: 14px 16px;
+    margin-top: 12px;
+    border: 1px solid var(--bege);
+    border-radius: 12px;
+    background-color: white;
+    color: var(--preto);
+    font-size: 15px;
+    font-family: inherit;
+    cursor: pointer;
+    outline: none;
+    transition: 0.25s;
+}
+
+.order-option:hover,
+.order-option:focus {
+    border-color: var(--verde);
+    box-shadow: 0 0 0 3px rgba(122, 139, 114, 0.12);
+}
+
+/* Espaço entre opções e botão */
+.product-info .order-option:last-of-type {
+    margin-bottom: 16px;
+}
+
+/* Botões da página de lembrancinhas */
+.product-info .order-button {
+    display: block;
+    width: 100%;
+    padding: 14px;
+    margin-top: 12px;
+    border: none;
+    border-radius: 25px;
+    background-color: var(--verde);
+    color: white;
+    font-family: inherit;
+    font-size: 15px;
+    text-align: center;
+    text-decoration: none;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.product-info .order-button:hover {
+    background-color: var(--marrom);
+    transform: translateY(-2px);
+}
+
+
+
+/* =========================
+   BOTÕES DOS SABONETES E TRATAMENTOS
+========================= */
+
+/* Botões de unidade */
+.product-card[data-category="sabonetes"] .order-button:not([data-product^="Kit"]),
+.product-card[data-category="tratamentos"] .order-button:not([data-product^="Kit"]) {
+    margin-top: 12px;
+    background-color: white;
+    color: var(--verde);
+    border: 1px solid var(--verde);
+    font-weight: 600;
+}
+
+/* Efeito ao passar o mouse na unidade */
+.product-card[data-category="sabonetes"] .order-button:not([data-product^="Kit"]):hover,
+.product-card[data-category="tratamentos"] .order-button:not([data-product^="Kit"]):hover {
+    background-color: var(--verde);
+    color: white;
+    transform: translateY(-2px);
+}
+
+/* Botões de kits */
+.product-card[data-category="sabonetes"] .order-button[data-product^="Kit"],
+.product-card[data-category="tratamentos"] .order-button[data-product^="Kit"] {
+    margin-top: 12px;
+    background-color: var(--verde);
+    color: white;
+    border: 1px solid var(--verde);
+    font-weight: bold;
+    box-shadow: 0 3px 8px rgba(122, 139, 114, 0.18);
+}
+
+/* Efeito ao passar o mouse nos kits */
+.product-card[data-category="sabonetes"] .order-button[data-product^="Kit"]:hover,
+.product-card[data-category="tratamentos"] .order-button[data-product^="Kit"]:hover {
+    background-color: var(--marrom);
+    border-color: var(--marrom);
+    transform: translateY(-2px);
+}
