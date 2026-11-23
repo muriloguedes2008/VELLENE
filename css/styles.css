@@ -898,3 +898,25 @@ nav a:hover {
     border-color: var(--marrom);
     transform: translateY(-2px);
 }
+
+/* LOGO VELLENE COMO BOTÃO DE INÍCIO */
+
+.logo-link {
+    text-decoration: none;
+    color: inherit;
+}
+
+/* ÍCONE DO CARRINHO */
+
+.cart-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    color: inherit;
+    transition: 0.3s;
+}
+
+.cart-link:hover {
+    color: var(--verde);
+    transform: scale(1.1);
+}
